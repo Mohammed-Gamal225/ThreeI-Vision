@@ -1,0 +1,21 @@
+<h1>{{currentusername}} Logs Details List</h1>
+<table>
+    <thead>
+      <tr>
+        <th>User Name</th>
+        <th>Time Stamp</th>
+        <th>Status</th>
+        <th>Browser</th>
+        <th>IP Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let log of logs" >
+        <td>{{ log.userName }}</td>
+        <td>{{ log.timeStamp | date:'medium' }}</td>
+        <td>{{ log.status }}</td>
+        <td>{{ log.browser }}</td>
+        <td>{{ log.ipAddress }}</td>
+      </tr>
+    </tbody>
+  </table>
